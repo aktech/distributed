@@ -92,7 +92,7 @@ jobs:
           fi
 
           source continuous_integration/scripts/set_ulimit.sh
-          pytest distributed -m "not avoid_ci" --runslow
+          pytest distributed -m "gpu and not avoid_ci" --runslow
 
       # - name: Debug with tmate on failure
       #   if: ${{ failure() }}
